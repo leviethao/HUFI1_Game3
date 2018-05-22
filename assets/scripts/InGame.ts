@@ -41,8 +41,8 @@ export default class NewClass extends cc.Component {
     }
 
     start () {
-        for (let i = 0; i < 15; i++) {
-            this.spawnEnemy();
+        for (let i = 0; i < 10; i++) {
+            this.spawnEnemy(i * 36);
         }
     }
 
@@ -56,37 +56,33 @@ export default class NewClass extends cc.Component {
             enemy = cc.instantiate(this.enemyPrefab);
         }
         enemy.getComponent(Enemy).inGame = this;
+        enemy.getComponent(Enemy).init();
         return enemy;
     }
 
-    spawnEnemy () {
+    spawnEnemy (angle: number) {
         let enemy = this.createEnemy();
         this.enemyRotateOrigin.addChild(enemy);
 
         //random position
-        let angleRand = Math.floor(cc.randomMinus1To1() * 180);
-        let vec1 = new cc.Vec2(1, 0);
         let vec2 = cc.Vec2.ZERO;
 
-        do {
-            vec2.x = vec1.x / Math.cos(angleRand);
-            vec2.y = Math.tan(angleRand) * vec1.x;
-            vec2.normalizeSelf();
-            
-            vec2.x = vec2.x * this.trajectoryRadius + this.circle.x;
-            vec2.y = vec2.y * this.trajectoryRadius +  this.circle.y;
-        } while (this.checkOverrideEnemy(vec2));
+        angle *= Math.PI / 180;
+        vec2.x = Math.cos(angle);
+        vec2.y = Math.sin(angle);
         
-
+        vec2.x = vec2.x * this.trajectoryRadius;
+        vec2.y = vec2.y * this.trajectoryRadius;
+    
         enemy.position = vec2;
     }
 
-    checkOverrideEnemy(vec: cc.Vec2) {
-        for (let enemy of this.enemyContainer) {
-            if (vec.sub(enemy.position).mag() > enemy.width) {
-                return true;
-            }
-        }
-        return false;
-    }
+    // checkOverrideEnemy(vec: cc.Vec2) {
+    //     for (let enemy of this.enemyContainer) {
+    //         if (cc.pDistance(vec, enemy.position) <= enemy.width) {
+    //              return true;
+    //         }
+    //     }
+    //     return false;
+    // }
 }

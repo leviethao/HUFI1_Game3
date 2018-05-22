@@ -21,7 +21,7 @@
     "_active": true,
     "_components": [],
     "_prefab": null,
-    "_id": "8e8b6a82-1d3a-4225-ac27-5029df05ace3",
+    "_id": "ebf8ff8c-dbe7-4ee4-bd97-b7db77aafd54",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -60,23 +60,17 @@
       },
       {
         "__id__": 5
-      },
-      {
-        "__id__": 7
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 9
-      },
-      {
-        "__id__": 10
+        "__id__": 8
       }
     ],
     "_prefab": null,
-    "_id": "4aaCYP9nJK7LJk1ebxAQB6",
+    "_id": "ecvXfoSlZGnrQaKSEZUV5P",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -93,8 +87,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 720,
-      "height": 1280
+      "width": 960,
+      "height": 640
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -102,8 +96,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 360,
-      "y": 640
+      "x": 480,
+      "y": 320
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -128,7 +122,7 @@
       }
     ],
     "_prefab": null,
-    "_id": "4f0tVFq8hHCpa/zZGkjlK3",
+    "_id": "c7oMXWzCtFn4XH8w4L9aaD",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -145,8 +139,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 150
+      "width": 36,
+      "height": 38
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -176,7 +170,7 @@
       "__uuid__": "b6a7a2b7-157a-4aba-8ff3-a4051f9bda0d"
     },
     "_type": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -192,7 +186,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "EnemyRotateOrigin",
+    "_name": "Player",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -203,10 +197,13 @@
     "_components": [
       {
         "__id__": 6
+      },
+      {
+        "__id__": 7
       }
     ],
     "_prefab": null,
-    "_id": "caUmsE4o9E6ogbnbv65Bg3",
+    "_id": "0fQtXbtUZA3oS1fk8iNeGZ",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -223,8 +220,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
+      "width": 36,
+      "height": 38
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -232,8 +229,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 215,
+      "y": -148
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -243,46 +240,42 @@
     "groupIndex": 0
   },
   {
-    "__type__": "0ca22R1+BtAMK6cg6jfS0qA",
+    "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 5
     },
-    "_enabled": true
-  },
-  {
-    "__type__": "cc.Node",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 2
+    "_enabled": true,
+    "_spriteFrame": {
+      "__uuid__": "b6a7a2b7-157a-4aba-8ff3-a4051f9bda0d"
     },
-    "_id": "37SNZhrj9NIL23V4YMog9w",
-    "_prefab": {
-      "__id__": 8
-    },
-    "_name": "Enemy",
-    "_active": true,
-    "_position": {
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
       "__type__": "cc.Vec2",
-      "x": -178,
-      "y": -348
+      "x": 0,
+      "y": 0
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
   },
   {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 7
+    "__type__": "2905eRqMhtGwpigOoaDntjp",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 5
     },
-    "asset": {
-      "__uuid__": "45c661a1-ede9-4c5a-9f69-256162883159"
-    },
-    "fileId": "3dYzHiLE9JTptE3bd/4oeR",
-    "sync": true
+    "_enabled": true,
+    "circle": {
+      "__id__": 3
+    }
   },
   {
     "__type__": "cc.Canvas",
@@ -294,28 +287,10 @@
     "_enabled": true,
     "_designResolution": {
       "__type__": "cc.Size",
-      "width": 720,
-      "height": 1280
+      "width": 960,
+      "height": 640
     },
     "_fitWidth": false,
     "_fitHeight": true
-  },
-  {
-    "__type__": "edd11MUYJxI7JPjMbQfLi8s",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "enemyRotateOrigin": {
-      "__id__": 5
-    },
-    "circle": {
-      "__id__": 3
-    },
-    "enemyPrefab": {
-      "__uuid__": "45c661a1-ede9-4c5a-9f69-256162883159"
-    }
   }
 ]
