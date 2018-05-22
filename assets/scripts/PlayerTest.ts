@@ -42,13 +42,9 @@ export default class NewClass extends cc.Component {
         vec.y = Math.sin(angle);
         vec.normalizeSelf();
 
-        //vec.mul(this.radius);
-        vec.x *= this.radius;
-        vec.y *= this.radius;
-
-        vec.x += this.circle.x;
-        vec.y += this.circle.y;
-        //vec.addSelf(this.circle.position);
+        vec.mulSelf(this.radius);
+        
+        vec.addSelf(this.circle.position);
         this.node.position = vec;
     }
 }
